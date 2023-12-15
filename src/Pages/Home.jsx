@@ -1,8 +1,9 @@
+import Course from "./Course";
 
 const Home = () => {
     return(
         <div>
-             <p> HELLO I Am Home </p>
+              <Course/>
         </div>
     )}
 export default Home;

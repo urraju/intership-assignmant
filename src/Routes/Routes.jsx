@@ -25,3 +25,4 @@ import Contact from "../Pages/Contact";
         ]
     }
  ])
+ export default router
