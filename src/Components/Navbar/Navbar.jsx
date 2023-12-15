@@ -3,8 +3,6 @@ import {} from "react-icons/";
 import logo from "../../assets/logo/logo.png";
 import userIcon from "../../assets/user/user.svg";
 import { BiMenu } from "react-icons/bi";
-import { BsSearch } from "react-icons/bs";
-import DarkMode from "../Layout/DarkMode";
 import useAuth from "../Hooks/useAuth";
 const Navbar = () => {
   const { user, signout } = useAuth();
@@ -16,7 +14,7 @@ const Navbar = () => {
     <>
       <NavLink
         className={({ isActive }) =>
-          isActive ? "underline text-rose-500" : ""
+          isActive ? "underline text-sky-500" : ""
         }
         to="/"
       >
@@ -24,7 +22,7 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          isActive ? "underline text-rose-500" : ""
+          isActive ? "underline text-sky-500" : ""
         }
         to="/course"
       >
@@ -32,17 +30,17 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          isActive ? "underline text-rose-500" : ""
+          isActive ? "underline text-sky-500" : ""
         }
-        to="/login"
+        to="/myCourse"
       >
-        Login
+        My Course
       </NavLink>
       {user?.email ? (
         <NavLink
           onClick={handleLogOut}
           className={({ isActive }) =>
-            isActive ? "underline text-rose-500" : ""
+            isActive ? "underline text-sky-500" : ""
           }
           to="/login"
         >
@@ -62,16 +60,16 @@ const Navbar = () => {
   );
 
   return (
-    <div className="w-full px-6 md:px-10   ">
-      <div className=" max-w-7xl mx-auto  px-3">
-        <div className="navbar ">
+    <div className="w-full sticky top-0 left-0 z-30 px-6 md:px-10   ">
+      <div className="max-w-screen-2xl  mx-auto   px-3">
+        <div className="navbar  max-w-screen-2xl mx-auto  backdrop-blur  rounded-xl bg-white/30">
           <div className="navbar-start">
             <div className="dropdown">
               <label
                 tabIndex={0}
-                className="btn text-rose-500  border border-rose-500 btn-circle  mr-5  lg:hidden"
+                className="btn text-sky-500  border border-sky-500 btn-circle  mr-5  lg:hidden"
               >
-                <BiMenu className="text-3xl" />
+                <BiMenu className="text-3xl"/>
               </label>
               <ul
                 tabIndex={0}
@@ -80,8 +78,12 @@ const Navbar = () => {
                 {nav}
               </ul>
             </div>
-            <NavLink to="/" className="  ">
-              <img className="w-24  " src={logo} alt="" />
+            <NavLink to="/" className=" flex items-center ">
+              <img className="w-24" src={logo} alt="" />
+              <div>
+                <h1 className="text-3xl font-bold uppercase text-sky-500">Career</h1>
+                <h1 className="tracking-wide  uppercase">Development</h1>
+              </div>
             </NavLink>
           </div>
           <div className="navbar-end hidden lg:flex">
@@ -91,19 +93,7 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-end  flex gap-2 items-center">
-            <div className="flex items-center opacity-0 md:opacity-100   gap-1 border px-3 py-1 rounded-full border-gray-200">
-              <input
-                className="bg-transparent   outline-none"
-                type="text"
-                placeholder="Search"
-              />
-              <BsSearch className="text-gray-400" />
-            </div>
-
-            <div>
-              <DarkMode />
-            </div>
-
+            
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
