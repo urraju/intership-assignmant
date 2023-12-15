@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { BsFacebook, BsLinkedin, BsGoogle } from "react-icons/bs";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Components/Hooks/useAuth";
+import HelmetUse from "../Components/Hooks/HelmetUse";
+import SocialLogin from "../Components/Layout/SocialLogin/SocialLogin";
  
 const Login = () => {
   const location = useLocation();
@@ -25,10 +27,8 @@ const Login = () => {
       <HelmetUse helmet={'Login'}/>
       <div className=" rounded-xl max-w-7xl mx-auto">
         <div className="flex flex-col p-3  md:flex-row items-center justify-center gap-20">
-          <div>
-            <img className="w-[500px] hidden md:block" src={logo} alt="" />
-          </div>
-          <div className="border w-full rounded-lg border-yellow-300 font-hebo md:w-1/3 p-10">
+           
+          <div className="border w-full rounded-lg border-sky-200 font-hebo md:w-1/3 p-10">
             <h1 className="text-center font-semibold text-3xl">Login</h1>
             <div className="mt-8">
               <form onSubmit={handleLogin}>
@@ -55,7 +55,7 @@ const Login = () => {
 
                 <button
                   type="submit"
-                  className="bg-yellow-400 disabled:bg-yellow-200 text-white uppercase w-full py-2 rounded"
+                  className="bg-sky-400 disabled:bg-sky-200 text-white uppercase w-full py-2 rounded"
                 >
                   Sign in
                 </button>
@@ -67,13 +67,12 @@ const Login = () => {
               <div className="flex items-center justify-center gap-3 mt-4">
                 <BsFacebook className="h-8 w-8 p-2 bg-gray-200 text-blue-600 rounded-full" />
                 <BsLinkedin className="h-8 w-8 p-2 bg-gray-200 text-blue-600 rounded-full" />
-                {/* <BsGoogle className="h-8 w-8 p-2 bg-gray-200 text--600 rounded-full" /> */}
                 <SocialLogin />
               </div>
 
               <h1 className="text-center font-light mt-4">
                 Have an account?{" "}
-                <Link to="/register" className="text-[#FF3811]">
+                <Link to="/register" className="text-sky-500">
                   Register
                 </Link>
               </h1>
