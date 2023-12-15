@@ -2,27 +2,17 @@ import { AiOutlineLike } from "react-icons/ai";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 const CourseCard = ({ data }) => {
-  console.log(Object.keys(data).join(","));
   const {
     _id,
-    id,
     name,
     instructor,
-    description,
-    enrollmentStatus,
     thumbnail,
-    duration,
-    schedule,
-    location,
-    prerequisites,
-    syllabus,
-    bgColor,
   } = data;
   return (
     <div>
-      <div className="border relative h-[360px] rounded-xl p-2">
+      <div className="border relative h-[340px] md:h-80 lg:h-[360px] rounded-xl p-2">
         <img
-          className=" w-full mx-auto md:h-52 rounded-xl "
+          className=" w-full mx-auto h-auto  lg:h-52 rounded-xl "
           src={thumbnail}
           alt=""
         />

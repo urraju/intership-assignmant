@@ -61,8 +61,8 @@ const Navbar = () => {
 
   return (
     <div className="w-full sticky top-0 left-0 z-30 px-6 md:px-10   ">
-      <div className="max-w-screen-2xl  mx-auto   px-3">
-        <div className="navbar  max-w-screen-2xl mx-auto  backdrop-blur  rounded-xl bg-white/30">
+      <div className="md:max-w-screen-2xl w-full  mx-auto   px-3">
+        <div className="navbar   md:max-w-screen-2xl mx-auto  backdrop-blur  rounded-xl bg-white/30">
           <div className="navbar-start">
             <div className="dropdown">
               <label
@@ -79,7 +79,7 @@ const Navbar = () => {
               </ul>
             </div>
             <NavLink to="/" className=" flex items-center ">
-              <img className="w-20" src={logo} alt="" />
+              <img className="w-20 hidden md:block" src={logo} alt="" />
               <div>
                 <h1 className="text-2xl font-bold uppercase text-sky-500">Career</h1>
                 <h1 className="tracking-widest text-center  uppercase">Develop</h1>

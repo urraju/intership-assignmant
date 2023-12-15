@@ -24,9 +24,10 @@ const Register = () => {
     registation(data.email,data.password)
     .then(result => {
       userUpdateProfile(data.name, data.photo)
+      toast.success('Registation Successfull')
       .then(() => {
         console.log('user profile info updated');
-        toast.success('Registation Successfull')
+        
         reset()
         navigate(location.state ? location.state : '/')
       })
