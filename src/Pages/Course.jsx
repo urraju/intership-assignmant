@@ -14,7 +14,7 @@ const Course = () => {
       console.log(course);
     return(
         <div className="p-2 md:p-5">
-             <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+             <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-20">
                 {course.map(item => <CourseCard key={item._id} data={item}/>)}
              </div>
         </div>

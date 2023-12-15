@@ -1,213 +1,236 @@
-https://i.ibb.co/nfMFB6S/react-native.png
-https://i.ibb.co/6s2sTxT/react-native.webp
-https://i.ibb.co/5sz8ZkD/react-hooks.png
-https://i.ibb.co/1QBLWB9/full-staack.png
-https://i.ibb.co/cx54tzr/react-mobile.webp
-https://i.ibb.co/881Q7Gq/graph-ql.png
-https://i.ibb.co/FYGwSWv/python.webp
-https://i.ibb.co/DGRfqzD/angular.png
-https://i.ibb.co/h2FGHtR/app-security.jpg
-
 [
-    {
-      "id": 1,
-      "name": "Introduction to React Native",
-      "instructor": "John Doe",
-      "description": "Learn the basics of React Native development and build your first mobile app.",
-      "enrollmentStatus": "Open",
-      "thumbnail": "https://i.ibb.co/6s2sTxT/react-native.webp",
-      "duration": "8 weeks",
-      "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
-      "location": "Online",
-      "prerequisites": ["Basic JavaScript knowledge", "Familiarity with React"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Introduction to React Native",
-          "content": "Overview of React Native, setting up your development environment."
-        },
-        {
-          "week": 2,
-          "topic": "Building Your First App",
-          "content": "Creating a simple mobile app using React Native components."
-        }
-      ],
-      "bgColor": "#FF5733"
-    },
-    {
-      "id": 2,
-      "name": "Advanced React Hooks",
-      "instructor": "Jane Smith",
-      "description": "Dive deep into advanced React hooks and their use cases.",
-      "enrollmentStatus": "Open",
-      "thumbnail": "https://i.ibb.co/5sz8ZkD/react-hooks.png",
-      "duration": "6 weeks",
-      "schedule": "Mondays and Wednesdays, 7:00 PM - 9:00 PM",
-      "location": "Online",
-      "prerequisites": ["Intermediate React knowledge", "Experience with hooks"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Understanding useState",
-          "content": "In-depth exploration of the useState hook and its applications."
-        },
-        {
-          "week": 2,
-          "topic": "Exploring useEffect",
-          "content": "Master the useEffect hook for side effects and lifecycle management."
-        }
-      ],
-      "bgColor": "#3399FF"
-    },
-    {
-      "id": 3,
-      "name": "Full-Stack JavaScript Development",
-      "instructor": "Alex Johnson",
-      "description": "Comprehensive course covering both front-end and back-end JavaScript development.",
-      "enrollmentStatus": "Closed",
-      "thumbnail": "https://i.ibb.co/1QBLWB9/full-staack.png",
-      "duration": "12 weeks",
-      "schedule": "Saturdays, 10:00 AM - 2:00 PM",
-      "location": "Hybrid (Online and In-person)",
-      "prerequisites": ["Basic HTML/CSS", "Understanding of databases"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Front-End Fundamentals",
-          "content": "HTML, CSS, and JavaScript for building responsive user interfaces."
-        },
-        {
-          "week": 2,
-          "topic": "Introduction to Node.js",
-          "content": "Setting up a server with Node.js and handling server-side logic."
-        }
-      ],
-      "bgColor": "#33FF66"
-    },
-    {
-      "id": 4,
-      "name": "React Native for Mobile Developers",
-      "instructor": "Sarah Johnson",
-      "description": "A course tailored for mobile developers to transition to React Native.",
-      "enrollmentStatus": "In Progress",
-      "thumbnail": "https://i.ibb.co/cx54tzr/react-mobile.webp",
-      "duration": "10 weeks",
-      "schedule": "Fridays, 6:30 PM - 8:30 PM",
-      "location": "Online",
-      "prerequisites": ["Experience in mobile development", "Basic JavaScript knowledge"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Introduction to React Native Basics",
-          "content": "Overview and comparison of React Native to traditional mobile development."
-        },
-        {
-          "week": 2,
-          "topic": "Native Modules Integration",
-          "content": "Integrating native modules for enhanced functionality in React Native apps."
-        }
-      ],
-      "bgColor": "#FF33A6"
-    },
-    {
-      "id": 5,
-      "name": "GraphQL Fundamentals",
-      "instructor": "Michael Anderson",
-      "description": "Learn the fundamentals of GraphQL and its implementation in modern web development.",
-      "enrollmentStatus": "Open",
-      "thumbnail": "https://i.ibb.co/881Q7Gq/graph-ql.png",
-      "duration": "8 weeks",
-      "schedule": "Thursdays, 7:00 PM - 9:00 PM",
-      "location": "Online",
-      "prerequisites": ["Basic knowledge of RESTful APIs", "Understanding of JavaScript"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Introduction to GraphQL",
-          "content": "Understanding the basics and advantages of GraphQL over REST."
-        },
-        {
-          "week": 2,
-          "topic": "GraphQL Schema and Queries",
-          "content": "Creating schemas and performing queries in GraphQL."
-        }
-      ],
-      "bgColor": "#CC33FF"
-    },
-    {
-      "id": 6,
-      "name": "Python for Data Science",
-      "instructor": "Emily Thompson",
-      "description": "Explore Python programming for data analysis and machine learning.",
-      "enrollmentStatus": "Open",
-      "thumbnail": "https://i.ibb.co/FYGwSWv/python.webp",
-      "duration": "10 weeks",
-      "schedule": "Wednesdays, 5:00 PM - 7:00 PM",
-      "location": "Online",
-      "prerequisites": ["Basic programming knowledge", "Interest in data science"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Introduction to Python",
-          "content": "Overview of Python programming language and its syntax."
-        },
-        {
-          "week": 2,
-          "topic": "Data Manipulation with Pandas",
-          "content": "Learn how to use Pandas for data cleaning and manipulation."
-        }
-      ],
-      "bgColor": "#FFD700"
-    },
-    {
-      "id": 7,
-      "name": "Web Development with Angular",
-      "instructor": "David Miller",
-      "description": "A comprehensive course on building modern web applications with Angular.",
-      "enrollmentStatus": "Open",
-      "thumbnail": "https://i.ibb.co/DGRfqzD/angular.png",
-      "duration": "12 weeks",
-      "schedule": "Tuesdays and Thursdays, 7:30 PM - 9:30 PM",
-      "location": "Online",
-      "prerequisites": ["Basic HTML/CSS", "JavaScript fundamentals"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Introduction to Angular",
-          "content": "Overview of Angular framework and its architecture."
-        },
-        {
-          "week": 2,
-          "topic": "Components and Directives",
-          "content": "Understanding Angular components and directives for building UI."
-        }
-      ],
-      "bgColor": "#66FF99"
-    },
-    {
-      "id": 8,
-      "name": "Mobile App Security",
-      "instructor": "Robert Davis",
-      "description": "Learn the best practices and techniques for securing mobile applications.",
-      "enrollmentStatus": "Closed",
-      "thumbnail": "https://i.ibb.co/h2FGHtR/app-security.jpg",
-      "duration": "8 weeks",
-      "schedule": "Mondays, 6:00 PM - 8:00 PM",
-      "location": "Online",
-      "prerequisites": ["Basic mobile app development knowledge", "Understanding of security concepts"],
-      "syllabus": [
-        {
-          "week": 1,
-          "topic": "Mobile App Threat Landscape",
-          "content": "Overview of common security threats in mobile applications."
-        },
-        {
-          "week": 2,
-          "topic": "Secure Coding Practices",
-          "content": "Best practices for writing secure code in mobile app development."
-        }
-      ],
-      "bgColor": "#FF6347"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Introduction to React Native",
+    "instructor": "John Doe",
+    "description": "Learn the basics of React Native development and build your first mobile app.",
+    "enrollmentStatus": "Open",
+    "thumbnail": "https://i.ibb.co/6s2sTxT/react-native.webp",
+    "duration": "8 weeks",
+    "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+    "location": "Online",
+    "prerequisites": ["Basic JavaScript knowledge", "Familiarity with React"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Introduction to React Native",
+        "content": "Overview of React Native, setting up your development environment."
+      },
+      {
+        "week": 2,
+        "topic": "Building Your First App",
+        "content": "Creating a simple mobile app using React Native components."
+      }
+    ],
+    "bgColor": "#FF5733",
+    "price": 199.99
+  },
+  {
+    "id": 2,
+    "name": "Advanced React Hooks",
+    "instructor": "Jane Smith",
+    "description": "Dive deep into advanced React hooks and their use cases.",
+    "enrollmentStatus": "Open",
+    "thumbnail": "https://i.ibb.co/5sz8ZkD/react-hooks.png",
+    "duration": "6 weeks",
+    "schedule": "Mondays and Wednesdays, 7:00 PM - 9:00 PM",
+    "location": "Online",
+    "prerequisites": ["Intermediate React knowledge", "Experience with hooks"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Understanding useState",
+        "content": "In-depth exploration of the useState hook and its applications."
+      },
+      {
+        "week": 2,
+        "topic": "Exploring useEffect",
+        "content": "Master the useEffect hook for side effects and lifecycle management."
+      }
+    ],
+    "bgColor": "#3399FF",
+    "price": 249.99
+  },
+  {
+    "id": 3,
+    "name": "Full-Stack JavaScript Development",
+    "instructor": "Alex Johnson",
+    "description": "Comprehensive course covering both front-end and back-end JavaScript development.",
+    "enrollmentStatus": "Closed",
+    "thumbnail": "https://i.ibb.co/1QBLWB9/full-staack.png",
+    "duration": "12 weeks",
+    "schedule": "Saturdays, 10:00 AM - 2:00 PM",
+    "location": "Hybrid (Online and In-person)",
+    "prerequisites": ["Basic HTML/CSS", "Understanding of databases"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Front-End Fundamentals",
+        "content": "HTML, CSS, and JavaScript for building responsive user interfaces."
+      },
+      {
+        "week": 2,
+        "topic": "Introduction to Node.js",
+        "content": "Setting up a server with Node.js and handling server-side logic."
+      }
+    ],
+    "bgColor": "#33FF66",
+    "price": 299.99
+  },
+  {
+    "id": 4,
+    "name": "React Native for Mobile Developers",
+    "instructor": "Sarah Johnson",
+    "description": "A course tailored for mobile developers to transition to React Native.",
+    "enrollmentStatus": "In Progress",
+    "thumbnail": "https://i.ibb.co/cx54tzr/react-mobile.webp",
+    "duration": "10 weeks",
+    "schedule": "Fridays, 6:30 PM - 8:30 PM",
+    "location": "Online",
+    "prerequisites": ["Experience in mobile development", "Basic JavaScript knowledge"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Introduction to React Native Basics",
+        "content": "Overview and comparison of React Native to traditional mobile development."
+      },
+      {
+        "week": 2,
+        "topic": "Native Modules Integration",
+        "content": "Integrating native modules for enhanced functionality in React Native apps."
+      }
+    ],
+    "bgColor": "#FF33A6",
+    "price": 199.99
+  },
+  {
+    "id": 5,
+    "name": "GraphQL Fundamentals",
+    "instructor": "Michael Anderson",
+    "description": "Learn the fundamentals of GraphQL and its implementation in modern web development.",
+    "enrollmentStatus": "Open",
+    "thumbnail": "https://i.ibb.co/881Q7Gq/graph-ql.png",
+    "duration": "8 weeks",
+    "schedule": "Thursdays, 7:00 PM - 9:00 PM",
+    "location": "Online",
+    "prerequisites": ["Basic knowledge of RESTful APIs", "Understanding of JavaScript"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Introduction to GraphQL",
+        "content": "Understanding the basics and advantages of GraphQL over REST."
+      },
+      {
+        "week": 2,
+        "topic": "GraphQL Schema and Queries",
+        "content": "Creating schemas and performing queries in GraphQL."
+      }
+    ],
+    "bgColor": "#CC33FF",
+    "price": 149.99
+  },
+  {
+    "id": 6,
+    "name": "Python for Data Science",
+    "instructor": "Emily Thompson",
+    "description": "Explore Python programming for data analysis and machine learning.",
+    "enrollmentStatus": "Open",
+    "thumbnail": "https://i.ibb.co/FYGwSWv/python.webp",
+    "duration": "10 weeks",
+    "schedule": "Wednesdays, 5:00 PM - 7:00 PM",
+    "location": "Online",
+    "prerequisites": ["Basic programming knowledge", "Interest in data science"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Introduction to Python",
+        "content": "Overview of Python programming language and its syntax."
+      },
+      {
+        "week": 2,
+        "topic": "Data Manipulation with Pandas",
+        "content": "Learn how to use Pandas for data cleaning and manipulation."
+      }
+    ],
+    "bgColor": "#FFD700",
+    "price": 199.99
+  },
+  {
+    "id": 7,
+    "name": "Web Development with Angular",
+    "instructor": "David Miller",
+    "description": "A comprehensive course on building modern web applications with Angular.",
+    "enrollmentStatus": "Open",
+    "thumbnail": "https://i.ibb.co/DGRfqzD/angular.png",
+    "duration": "12 weeks",
+    "schedule": "Tuesdays and Thursdays, 7:30 PM - 9:30 PM",
+    "location": "Online",
+    "prerequisites": ["Basic HTML/CSS", "JavaScript fundamentals"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Introduction to Angular",
+        "content": "Overview of Angular framework and its architecture."
+      },
+      {
+        "week": 2,
+        "topic": "Components and Directives",
+        "content": "Understanding Angular components and directives for building UI."
+      }
+    ],
+    "bgColor": "#66FF99",
+    "price": 279.99
+  },
+  {
+    "id": 8,
+    "name": "Mobile App Security",
+    "instructor": "Robert Davis",
+    "description": "Learn the best practices and techniques for securing mobile applications.",
+    "enrollmentStatus": "Closed",
+    "thumbnail": "https://i.ibb.co/h2FGHtR/app-security.jpg",
+    "duration": "8 weeks",
+    "schedule": "Mondays, 6:00 PM - 8:00 PM",
+    "location": "Online",
+    "prerequisites": ["Basic mobile app development knowledge", "Understanding of security concepts"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Mobile App Threat Landscape",
+        "content": "Overview of common security threats in mobile applications."
+      },
+      {
+        "week": 2,
+        "topic": "Secure Coding Practices",
+        "content": "Best practices for writing secure code in mobile app development."
+      }
+    ],
+    "bgColor": "#FF6347",
+    "price": 329.99
+  },
+  {
+    "id": 1,
+    "name": "Introduction to React Native",
+    "instructor": "John Doe",
+    "description": "Learn the basics of React Native development and build your first mobile app.",
+    "enrollmentStatus": "Open",
+    "thumbnail": "https://i.ibb.co/6s2sTxT/react-native.webp",
+    "duration": "8 weeks",
+    "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+    "location": "Online",
+    "prerequisites": ["Basic JavaScript knowledge", "Familiarity with React"],
+    "syllabus": [
+      {
+        "week": 1,
+        "topic": "Introduction to React Native",
+        "content": "Overview of React Native, setting up your development environment."
+      },
+      {
+        "week": 2,
+        "topic": "Building Your First App",
+        "content": "Creating a simple mobile app using React Native components."
+      }
+    ],
+    "bgColor": "#FF5733",
+    "price": 199.99
+  }
+]

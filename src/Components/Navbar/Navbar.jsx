@@ -79,10 +79,10 @@ const Navbar = () => {
               </ul>
             </div>
             <NavLink to="/" className=" flex items-center ">
-              <img className="w-24" src={logo} alt="" />
+              <img className="w-20" src={logo} alt="" />
               <div>
-                <h1 className="text-3xl font-bold uppercase text-sky-500">Career</h1>
-                <h1 className="tracking-wide  uppercase">Development</h1>
+                <h1 className="text-2xl font-bold uppercase text-sky-500">Career</h1>
+                <h1 className="tracking-widest text-center  uppercase">Develop</h1>
               </div>
             </NavLink>
           </div>
