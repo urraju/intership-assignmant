@@ -27,6 +27,7 @@ const Details = () => {
   
   const handleBuy = () => {
     const buyCourse = {
+      courseId : _id,
       name : name,
       instructor : instructor,
       thumbnail : thumbnail,

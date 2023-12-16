@@ -8,13 +8,13 @@ const UserDashboard = () => {
   return (
     <div className="">
       <div className="flex md:gap-20">
-        <div className=" lg:drawer-open ">
+        <div className=" lg:drawer-open z-30 ">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
             {/* Page content here */}
             <label
               htmlFor="my-drawer-2"
-              className=" lg:hidden cursor-pointer ml-5 mt-3"
+              className=" lg:hidden cursor-pointer  mt-3"
             >
               <AiOutlineMenu className="text-xl text-white bg-sky-500 rounded-full h-8 w-8 p-2"/>
             </label>
