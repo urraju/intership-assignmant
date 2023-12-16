@@ -1,13 +1,24 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {} from "react-icons/";
 import logo from "../../assets/logo/logo.png";
 import userIcon from "../../assets/user/user.svg";
 import { BiMenu } from "react-icons/bi";
 import useAuth from "../Hooks/useAuth";
+import { MdDashboard } from "react-icons/md";
+import toast from "react-hot-toast";
 const Navbar = () => {
-  const { user, signout } = useAuth();
+  const { user, singout } = useAuth();
+  const navigate = useNavigate()
   const handleLogOut = () => {
-    signout().then().catch();
+    singout().then(result => {
+     console.log(result);
+     toast.success('Logout Successfull')
+      navigate('/')
+    }).catch(error => {
+      console.log(error);
+      
+    });
+
   };
 
   const nav = (
@@ -107,6 +118,9 @@ const Navbar = () => {
               >
                 <li>{user ? user.displayName : ""}</li>
                 <li>{user ? user.email : ""}</li>
+                {user ? <NavLink className='uppercase text-cyan-500 mt-3 flex items-center   border p-1 gap-2 font-kdam rounded border-sky-400 border-opacity-40 font-bold' to='/userdashboard/userHome'>
+               <MdDashboard className="text-xl text-sky-500  "/> Dashboard
+              </NavLink> : ''}
               </ul>
             </div>
           </div>

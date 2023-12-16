@@ -6,6 +6,9 @@ import Contact from "../Pages/Contact";
 import Details from "../Components/Layout/DetailsPage/Details";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import UserDashboard from "../Dashboard/UserDashboard";
+import UserHome from "../Dashboard/UserHome";
+import UserProfile from "../Dashboard/UserProfile";
 
  
  const router = createBrowserRouter([
@@ -39,6 +42,22 @@ import Register from "../Pages/Register";
                 loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`),
             },
         ]
+        
+    },
+    {
+        path : '/userdashboard',
+        element : <UserDashboard/>,
+        children : [
+            {
+                path : 'userHome',
+                element : <UserHome/>
+            },
+            {
+                path : 'userProfile',
+                element : <UserProfile/>
+            },
+        ]
+        
     }
  ])
  export default router

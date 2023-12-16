@@ -1,8 +1,14 @@
 import { IoIosArrowRoundBack, IoMdArrowDropright } from "react-icons/io";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import useAxios from "../../Hooks/useAxios";
+import toast from "react-hot-toast";
+import useAuth from "../../Hooks/useAuth";
 const Details = () => {
   const data = useLoaderData();
+  const {user} = useAuth()
+  const axiosPublic = useAxios()
+  const navigate = useNavigate()
   const {
     _id,
     id,
@@ -18,7 +24,22 @@ const Details = () => {
     syllabus,
     price,
   } = data;
-  console.log(data);
+  
+  const handleBuy = () => {
+    const buyCourse = {
+      name : name,
+      instructor : instructor,
+      thumbnail : thumbnail,
+      userEmail : user?.email,
+      userName : user?.displayName
+    }
+    axiosPublic.post('/userCourse', buyCourse)
+    .then(result => {
+     console.log(result.data);
+     toast.success('Buy Successfull')
+     navigate('/')
+    })
+  }
   return (
     <div className="p-2 md:p-5 mt-10 my-10">
       <div className="max-w-screen-2xl flex items-center justify-center mx-auto">
@@ -78,6 +99,13 @@ const Details = () => {
               <span className="text-lg font-semibold">Duration : </span>
               {duration}
             </p>
+           {enrollmentStatus === 'Closed' ?  <p className="text-red-500 ">
+              <span className="text-lg text-black font-semibold">Status : </span>
+              {enrollmentStatus}
+            </p> :  <p className="text-sky-500 ">
+              <span className="text-lg text-black font-semibold">Status : </span>
+              {enrollmentStatus}
+            </p>}
             {price ? (
               <p className="flex items-center  gap-2">
                 <span className="text-lg font-semibold">Price : </span>$
@@ -94,9 +122,13 @@ const Details = () => {
                 Home
               </button>
             </Link>
-            <button className="bg-sky-500 text-sm text-white px-3 py-1 flex items-center gap-2 rounded ">
-              Buy course <IoIosArrowRoundForward className="text-lg mt-1" />
-            </button>
+            {enrollmentStatus === 'Closed' || enrollmentStatus === 'In Progress' ? <button disabled   className="bg-sky-500 text-sm disabled:bg-sky-300 text-white px-3 py-1 flex items-center gap-2 rounded ">
+              Buy Now <IoIosArrowRoundForward className="text-lg mt-1" />
+            </button> :  user?.email ?  <button onClick={handleBuy} className="bg-sky-500 text-sm text-white px-3 py-1 flex items-center gap-2 rounded ">
+              Buy Now <IoIosArrowRoundForward className="text-lg mt-1" />
+            </button> : <Link to='/login'><button    className="bg-sky-500 text-sm disabled:bg-sky-300 text-white px-3 py-1 flex items-center gap-2 rounded ">
+              Buy Now <IoIosArrowRoundForward className="text-lg mt-1" />
+            </button></Link>}  
           </div>
         </div>
       </div>
