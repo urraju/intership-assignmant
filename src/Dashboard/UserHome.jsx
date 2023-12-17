@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxios from "../Components/Hooks/useAxios";
 import useAuth from "../Components/Hooks/useAuth";
 import { Link } from "react-router-dom";
-
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 const UserHome = () => {
   const { user } = useAuth();
   console.log(user?.email);
@@ -22,7 +22,13 @@ const UserHome = () => {
         <p className="uppercase  mb-4 text-4xl">My Course</p>
         <h1 className="uppercase text-sky-500 ">paid Course</h1>
       </div>
-      <div className="overflow-x-auto bg-sky-100 h-max">
+     {userCourse.length === 0 ?
+     <div>
+       <p className="text-center  text-sky-500 text-2xl">You have no purchased courses You can click <br /> the button to purchase any course</p>
+       <Link to='/'><button    className="bg-sky-500 text-sm mx-auto mt-10 disabled:bg-sky-300 text-white px-3 py-1 flex items-center gap-2 rounded ">
+       <IoIosArrowRoundBack className="text-lg mt-1" /> Go Home 
+            </button></Link>
+     </div> :  <div className="overflow-x-auto bg-sky-100 h-max">
         <table className="table">
           {/* head */}
           <thead>
@@ -56,7 +62,7 @@ const UserHome = () => {
             </tr>)}
           </tbody>
         </table>
-      </div>
+      </div>}
     </div>
   );
 };

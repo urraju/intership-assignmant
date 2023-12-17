@@ -28,7 +28,7 @@ const UserDashboard = () => {
             <ul className="menu p-4 w-80 gap-3 min-h-full backdrop-blur bg-white/40 text-base-content">
               {/* Sidebar content here */}
               <div className="flex items-center gap-3">
-                <img className="border p-2 rounded-full" src={user?.photoURL} alt="" />
+                <img className=" w-24 border p-2 rounded-full" src={user?.photoURL} alt="" />
                  <p className="text-xl font-bold text-sky-800">{user?.displayName}</p>
               </div>
                <Link to='/userdashboard/userHome' className=" border rounded-lg uppercase font-lexend px-3  py-1 flex text-lg  items-center gap-2"><AiFillHome className="text-2xl text-sky-500"/>User Home</Link>

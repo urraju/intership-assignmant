@@ -12,15 +12,15 @@ const Footer = () => {
     <div className="w-full mt-20 bg-gradient-to-tr  to-violet-950 from-black ">
       <footer className="footer grid grid-cols-2 md:grid-cols-4 w-9/12 mx-auto text-white p-10  font-philospar">
         <nav>
-          <header className="footer-title border-b ">Watch Brand</header>
-          <a className="link link-hover">Rolex</a>
-          <a className="link link-hover">Apple</a>
-          <a className="link link-hover">Casio</a>
-          <a className="link link-hover">Seiko</a>
-          <a className="link link-hover">Omega</a>
+          <header className="footer-title border-b ">All Course</header>
+          <a className="link link-hover">React</a>
+          <a className="link link-hover">React Native</a>
+          <a className="link link-hover">Python</a>
+          <a className="link link-hover">GraphQL</a>
+          <a className="link link-hover">Angular</a>
         </nav>
         <nav>
-          <header className="footer-title border-b ">Watch</header>
+          <header className="footer-title border-b ">Contact</header>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover"></a>
@@ -48,7 +48,7 @@ const Footer = () => {
             <FaYoutube />
           </div>
           <div>
-            <img className="w-52" src={logo} alt="" />
+            <img className="w-40" src={logo} alt="" />
           </div>
         </nav>
       </footer>

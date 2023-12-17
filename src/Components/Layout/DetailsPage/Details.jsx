@@ -1,4 +1,4 @@
-import { IoIosArrowRoundBack, IoMdArrowDropright } from "react-icons/io";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import useAxios from "../../Hooks/useAxios";
