@@ -9,12 +9,14 @@ import Register from "../Pages/Register";
 import UserDashboard from "../Dashboard/UserDashboard";
 import UserHome from "../Dashboard/UserHome";
 import UserProfile from "../Dashboard/UserProfile";
+import NotFound from "../Components/Layout/NotFound/NotFound";
 
  
  const router = createBrowserRouter([
     {
         path : '/',
         element : <Root/>,
+        errorElement : <NotFound/>,
         children : [
             {
                 path : '/',
