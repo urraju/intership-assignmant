@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-const Banner = ({handleSearch}) => {
+const Banner = () => {
   return (
     <div className="relative top-0">
       <div className="bg-backgroundImage bg-cover  bg-no-repeat bg-current object-contain relative  flex items-center justify-center  h-[400px] w-full">

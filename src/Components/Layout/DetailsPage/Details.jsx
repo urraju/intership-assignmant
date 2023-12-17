@@ -4,6 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import useAxios from "../../Hooks/useAxios";
 import toast from "react-hot-toast";
 import useAuth from "../../Hooks/useAuth";
+import HelmetUse from "../../Hooks/HelmetUse";
 const Details = () => {
   const data = useLoaderData();
   const {user} = useAuth()
@@ -43,6 +44,7 @@ const Details = () => {
   }
   return (
     <div className="p-2 md:p-5 mt-10 my-10">
+      <HelmetUse helmet={'Details'}/>
       <div className="max-w-screen-2xl flex items-center justify-center mx-auto">
         <div className="font-lexend border-sky-200 w-[800px] border p-1  md:p-3 rounded-xl">
           <img

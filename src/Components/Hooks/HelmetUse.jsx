@@ -1,6 +1,5 @@
 
 import { Helmet } from "react-helmet";
-
 const HelmetUse = ({ helmet }) => {
   return (
     <Helmet>

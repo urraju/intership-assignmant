@@ -8,38 +8,34 @@ import { MdDashboard } from "react-icons/md";
 import toast from "react-hot-toast";
 const Navbar = () => {
   const { user, singout } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleLogOut = () => {
-    singout().then(result => {
-     console.log(result);
-     toast.success('Logout Successfull')
-      navigate('/')
-    }).catch(error => {
-      console.log(error);
-      
-    });
-
+    singout()
+      .then((result) => {
+        console.log(result);
+        toast.success("Logout Successfull");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const nav = (
     <>
       <NavLink
-        className={({ isActive }) =>
-          isActive ? "underline text-sky-500" : ""
-        }
+        className={({ isActive }) => (isActive ? "underline text-sky-500" : "")}
         to="/"
       >
         Home
       </NavLink>
       <NavLink
-        className={({ isActive }) =>
-          isActive ? "underline text-sky-500" : ""
-        }
+        className={({ isActive }) => (isActive ? "underline text-sky-500" : "")}
         to="/course"
       >
         Course
       </NavLink>
-      
+
       {user?.email ? (
         <NavLink
           onClick={handleLogOut}
@@ -73,7 +69,7 @@ const Navbar = () => {
                 tabIndex={0}
                 className="btn text-sky-500  border border-sky-500 btn-circle  mr-5  lg:hidden"
               >
-                <BiMenu className="text-3xl"/>
+                <BiMenu className="text-3xl" />
               </label>
               <ul
                 tabIndex={0}
@@ -85,8 +81,12 @@ const Navbar = () => {
             <NavLink to="/" className=" flex items-center ">
               <img className="w-20 hidden md:block" src={logo} alt="" />
               <div>
-                <h1 className="text-2xl font-bold uppercase text-sky-500">Career</h1>
-                <h1 className="tracking-widest text-center  uppercase">Develop</h1>
+                <h1 className="text-2xl font-bold uppercase text-sky-500">
+                  Career
+                </h1>
+                <h1 className="tracking-widest text-center  uppercase">
+                  Develop
+                </h1>
               </div>
             </NavLink>
           </div>
@@ -97,7 +97,6 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-end  flex gap-2 items-center">
-            
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
@@ -111,9 +110,16 @@ const Navbar = () => {
               >
                 <li>{user ? user.displayName : ""}</li>
                 <li>{user ? user.email : ""}</li>
-                {user ? <NavLink className='uppercase text-cyan-500 mt-3 flex items-center   border p-1 gap-2 font-kdam rounded border-sky-400 border-opacity-40 font-bold' to='/userdashboard/userHome'>
-               <MdDashboard className="text-xl text-sky-500  "/> Dashboard
-              </NavLink> : ''}
+                {user ? (
+                  <NavLink
+                    className="uppercase text-cyan-500 mt-3 flex items-center   border p-1 gap-2 font-kdam rounded border-sky-400 border-opacity-40 font-bold"
+                    to="/userdashboard/userHome"
+                  >
+                    <MdDashboard className="text-xl text-sky-500  " /> Dashboard
+                  </NavLink>
+                ) : (
+                  ""
+                )}
               </ul>
             </div>
           </div>

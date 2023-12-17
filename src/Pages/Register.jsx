@@ -1,18 +1,17 @@
-
 import React from "react";
-import { useForm  } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { BsFacebook, BsLinkedin, BsGoogle } from "react-icons/bs";
-import logo from '../assets/register/register.png'
+import logo from "../assets/register/register.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Components/Hooks/useAuth";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import HelmetUse from "../Components/Hooks/HelmetUse";
 import SocialLogin from "../Components/Layout/SocialLogin/SocialLogin";
 const Register = () => {
-  const location = useLocation()
-  const navigate = useNavigate()
-  const {registation,userUpdateProfile} = useAuth()
- 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { registation, userUpdateProfile } = useAuth();
+
   const {
     register,
     handleSubmit,
@@ -21,24 +20,20 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    registation(data.email,data.password)
-    .then(result => {
-      userUpdateProfile(data.name, data.photo)
-      toast.success('Registation Successfull')
-      reset()
-      navigate(location.state ? location.state : '/')
-       
-      .catch(errors => console.log(errors))
-      
-    })
+    registation(data.email, data.password).then((result) => {
+      userUpdateProfile(data.name, data.photo);
+      toast.success("Registation Successfull");
+      reset();
+      navigate(location.state ? location.state : "/").catch((errors) =>
+        console.log(errors)
+      );
+    });
   };
 
-   
-   
   return (
     <div className="md:py-10">
-        <Toaster/>
-      <HelmetUse helmet={'Register'}/>
+      <Toaster />
+      <HelmetUse helmet={"Register"} />
       <div className=" max-w-7xl mx-auto mt-20">
         <div className="flex flex-col p-3 md:flex-row-reverse items-center justify-center md:gap-20">
           <div>
@@ -57,9 +52,12 @@ const Register = () => {
                     id=""
                     placeholder="Your Name"
                     {...register("name", { required: true })}
-                   
                   />
-                   {errors.name && <span className="text-red-600 block">This name is required</span>}
+                  {errors.name && (
+                    <span className="text-red-600 block">
+                      This name is required
+                    </span>
+                  )}
                 </label>
                 <label htmlFor="">
                   Email
@@ -71,9 +69,13 @@ const Register = () => {
                     placeholder="Your Email"
                     {...register("email", { required: true })}
                   />
-                  {errors.email && <span className="text-red-600 block">This email is required</span>}
+                  {errors.email && (
+                    <span className="text-red-600 block">
+                      This email is required
+                    </span>
+                  )}
                 </label>
-                
+
                 <label htmlFor="">
                   Photo
                   <input
@@ -84,7 +86,11 @@ const Register = () => {
                     placeholder="Photo url"
                     {...register("photo", { required: true })}
                   />
-                  {errors.ulr && <span className="text-red-600 block">This  url is required</span>}
+                  {errors.ulr && (
+                    <span className="text-red-600 block">
+                      This url is required
+                    </span>
+                  )}
                 </label>
                 <label htmlFor="">
                   Confirm Password
@@ -94,9 +100,17 @@ const Register = () => {
                     name="password"
                     id=""
                     placeholder="Your Password"
-                    {...register("password", { required: true , minLength : 6, maxLength : 12})}
+                    {...register("password", {
+                      required: true,
+                      minLength: 6,
+                      maxLength: 12,
+                    })}
                   />
-                  {errors.password && <span className="text-red-600 block">This password is required</span>}
+                  {errors.password && (
+                    <span className="text-red-600 block">
+                      This password is required
+                    </span>
+                  )}
                 </label>
                 <button
                   type="submit"
@@ -112,7 +126,7 @@ const Register = () => {
               <div className="flex items-center justify-center gap-3 mt-4">
                 <BsFacebook className="h-8 w-8 p-2 bg-gray-200 text-blue-600 rounded-full" />
                 <BsLinkedin className="h-8 w-8 p-2 bg-gray-200 text-blue-600 rounded-full" />
-                <SocialLogin/>
+                <SocialLogin />
               </div>
 
               <h1 className="text-center font-light mt-4">

@@ -1,20 +1,16 @@
-
-
 import { FaGoogle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
- 
 
 const SocialLogin = () => {
   const { google } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   const handleGoogle = () => {
     google().then((result) => {
       console.log(result.user);
       navigate(location.state ? location.state : "/");
-      
     });
   };
 

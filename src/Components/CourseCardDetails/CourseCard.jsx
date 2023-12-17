@@ -64,7 +64,6 @@ const CourseCard = ({ data,refetch }) => {
               {like}
             </button> : ''}
 
-
             <p className="uppercase text-sm font-semibold">Details</p>
             <Link className="px-3" to={`/details/${_id}`}>
               <p className="bg-sky-100 rounded-full p-1  text-sky-700">
