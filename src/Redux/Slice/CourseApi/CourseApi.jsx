@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const courseApi = createApi({
   reducerPath: "courseApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000",
+    baseUrl: "https://intership-server-a.vercel.app",
   }),
   tagTypes: ["Post"],
   endpoints: (build) => ({
